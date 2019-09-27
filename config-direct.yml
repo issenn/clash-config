@@ -159,6 +159,16 @@ Proxy:
   # #   ws + tls
   # - { name: "vmess", type: vmess, server: server, port: 443, uuid: uuid, alterId: 32, cipher: auto, network: ws, ws-path: /path, tls: true }
 
+  - name: 'www.eieee.cf:80'
+    type: 'vmess'
+    server: 'www.eieee.cf'
+    port: '80'
+    uuid: 'dda8e363-879c-4a7c-f9eb-df1734fa9945'
+    alterId: '0'
+    cipher: auto
+    network: 'ws'
+    ws-path: '/'
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
