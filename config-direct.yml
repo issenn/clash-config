@@ -231,6 +231,42 @@ Proxy:
     ws-path: '/ray'
     tls: true
 
+  - name: 'v1.qlolp.ml:443'
+    type: 'vmess'
+    server: 'v1.qlolp.ml'
+    port: '443'
+    uuid: 'f8dfc2f1-374d-48d3-b57d-73b16b6a090c'
+    alterId: '8'
+    cipher: 'aes-128-gcm'
+    tls: true
+
+  - name: 'v2.qlolp.ml:443'
+    type: 'vmess'
+    server: 'v2.qlolp.ml'
+    port: '443'
+    uuid: 'f8dfc2f1-374d-48d3-b57d-73b16b6a090c'
+    alterId: '8'
+    cipher: 'aes-128-gcm'
+    tls: true
+
+  - name: 'v3.qlolp.ml:443'
+    type: 'vmess'
+    server: 'v3.qlolp.ml'
+    port: '443'
+    uuid: 'f8dfc2f1-374d-48d3-b57d-73b16b6a090c'
+    alterId: '8'
+    cipher: 'aes-128-gcm'
+    tls: true
+
+  - name: 'v4.qlolp.ml:443'
+    type: 'vmess'
+    server: 'v4.qlolp.ml'
+    port: '443'
+    uuid: 'f8dfc2f1-374d-48d3-b57d-73b16b6a090c'
+    alterId: '8'
+    cipher: 'aes-128-gcm'
+    tls: true
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -274,6 +310,14 @@ Proxy Group:
       - 'www.kernels.bid:443'
       - 'www.eieee.cf:80'
       - 'www.kernels.bid:80'
+      - 'auto.freev2.top:36864'
+      - 'v2us01.isxa.top:443'
+      - 'v2us02.isxa.top:443'
+      - 'v2us03.isxa.top:443'
+      - 'v1.qlolp.ml:443'
+      - 'v2.qlolp.ml:443'
+      - 'v3.qlolp.ml:443'
+      - 'v4.qlolp.ml:443'
       - 'Shadowsocks'
 Rule:
   # # Apple
@@ -340,6 +384,10 @@ Rule:
   - DOMAIN-KEYWORD,usage,REJECT
   - DOMAIN-KEYWORD,wlmonitor,REJECT
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
+
+  # 国外网站
+  - DOMAIN-SUFFIX,ssrshare.com,Proxy
+  - DOMAIN-SUFFIX,candysoft.jp,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
