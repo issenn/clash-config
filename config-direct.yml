@@ -389,7 +389,10 @@ Rule:
 
   # 国外网站
   - DOMAIN-SUFFIX,ssrshare.com,Proxy
+  - DOMAIN-SUFFIX,yahoo.co.jp,Proxy
   - DOMAIN-SUFFIX,candysoft.jp,Proxy
+  - DOMAIN-SUFFIX,interheart.co.jp,Proxy
+  - DOMAIN-SUFFIX,getchu.com,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
