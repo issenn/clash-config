@@ -255,8 +255,58 @@ Rule:
   # - DOMAIN-KEYWORD,-cn,DIRECT
 
   # 抗 DNS 污染
+  - DOMAIN-KEYWORD,amazon,Proxy
   - DOMAIN-KEYWORD,google,Proxy
   # - DOMAIN-SUFFIX,google.com,Proxy
+  - DOMAIN-KEYWORD,gmail,Proxy
+  - DOMAIN-KEYWORD,youtube,Proxy
+  - DOMAIN-KEYWORD,facebook,Proxy
+  - DOMAIN-SUFFIX,fb.me,Proxy
+  - DOMAIN-SUFFIX,fbcdn.net,Proxy
+  - DOMAIN-KEYWORD,twitter,Proxy
+  - DOMAIN-KEYWORD,instagram,Proxy
+  - DOMAIN-KEYWORD,dropbox,Proxy
+  - DOMAIN-SUFFIX,twimg.com,Proxy
+  - DOMAIN-KEYWORD,blogspot,Proxy
+  - DOMAIN-SUFFIX,youtu.be,Proxy
+  - DOMAIN-KEYWORD,whatsapp,Proxy
+
+  # 常见广告域名屏蔽
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,tracking,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+
+  # Telegram
+  - DOMAIN-SUFFIX,telegra.ph,Proxy
+  - DOMAIN-SUFFIX,telegram.org,Proxy
+
+  - IP-CIDR,91.108.56.0/22,Proxy
+  - IP-CIDR,91.108.4.0/22,Proxy
+  - IP-CIDR,91.108.8.0/22,Proxy
+  - IP-CIDR,109.239.140.0/24,Proxy
+  - IP-CIDR,149.154.160.0/20,Proxy
+  - IP-CIDR,149.154.164.0/22,Proxy
 
   # LAN
   - DOMAIN-SUFFIX,local,DIRECT
@@ -268,5 +318,5 @@ Rule:
   - IP-CIDR,100.64.0.0/10,DIRECT
 
   # 最终规则
-  - GEOIP,CN,DIRECT
+  # - GEOIP,CN,DIRECT
   - MATCH,DIRECT
