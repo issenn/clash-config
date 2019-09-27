@@ -53,6 +53,7 @@ dns:
     - 1.2.4.8
     - 8.8.8.8
     - 114.114.114.114
+    - 119.29.29.29
     - 223.5.5.5
     - tls://dns.rubyfish.cn:853
     # - https://dns.rubyfish.cn/dns-query
@@ -388,7 +389,7 @@ Rule:
 
   # 国外网站
   - DOMAIN-SUFFIX,ssrshare.com,Proxy
-  # - DOMAIN-SUFFIX,candysoft.jp,Proxy
+  - DOMAIN-SUFFIX,candysoft.jp,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
