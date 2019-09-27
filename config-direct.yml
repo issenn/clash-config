@@ -269,6 +269,30 @@ Proxy:
     cipher: 'aes-128-gcm'
     tls: true
 
+  - name: 'fr.sixu.cf:443'
+    type: 'vmess'
+    server: 'fr.sixu.cf'
+    port: '443'
+    uuid: '7dd46db3-9310-4188-bff2-db5f496d6bfb'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/'
+    tls: true
+    ws-headers: { Host: fr.sixu.cf }
+
+  - name: 'ru.sixu.cf:443'
+    type: 'vmess'
+    server: 'ru.sixu.cf'
+    port: '443'
+    uuid: '5b304ad9-bb5a-4dc3-bd5d-1fa2f3f12bb4'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/'
+    tls: true
+    ws-headers: { Host: ru.sixu.cf }
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -313,6 +337,8 @@ Proxy Group:
       - 'www.eieee.cf:80'
       - 'www.kernels.bid:80'
       - 'auto.freev2.top:36864'
+      - 'fr.sixu.cf:443'
+      - 'ru.sixu.cf:443'
       - 'v2us01.isxa.top:443'
       - 'v2us02.isxa.top:443'
       - 'v2us03.isxa.top:443'
