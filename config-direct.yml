@@ -165,7 +165,7 @@ Proxy:
     port: '80'
     uuid: 'dda8e363-879c-4a7c-f9eb-df1734fa9945'
     alterId: '0'
-    cipher: auto
+    cipher: 'auto'
     network: 'ws'
     ws-path: '/'
 
@@ -175,7 +175,7 @@ Proxy:
     port: '80'
     uuid: '3dd784e2-1b8b-1782-ea10-18a8da6a1bea'
     alterId: '0'
-    cipher: auto
+    cipher: 'auto'
     network: 'ws'
     ws-path: '/ws'
 
@@ -185,7 +185,7 @@ Proxy:
     port: '443'
     uuid: '159354e8-75aa-99ea-5809-748bbd0548f8'
     alterId: '0'
-    cipher: auto
+    cipher: 'auto'
     network: 'ws'
     ws-path: '/ws'
     tls: true
@@ -199,10 +199,10 @@ Proxy:
   # #   tls (skip-cert-verify)
   # - { name: "socks", type: socks5, server: server, port: 443, tls: true, skip-cert-verify: true }
 
-  - name: Shadowsocks
-    type: socks5
-    server: 127.0.0.1
-    port: "5566"
+  - name: 'Shadowsocks'
+    type: 'socks5'
+    server: '127.0.0.1'
+    port: '5566'
 
   # #   http
   # - { name: "http", type: http, server: server, port: 443 }
@@ -227,10 +227,13 @@ Proxy Group:
   # # 您也可以使用 RESTful API 去切换服务器，这种方式推荐在 GUI 中使用
   # - { name: "Proxy", type: select, proxies: ["ss1", "ss2", "vmess1", "auto"] }
 
-  - name: Proxy
-    type: select
+  - name: 'Proxy'
+    type: 'select'
     proxies:
-      - Shadowsocks
+      - 'www.kernels.bid:443'
+      - 'www.eieee.cf:80'
+      - 'www.kernels.bid:80'
+      - 'Shadowsocks'
 Rule:
   # # Apple
   # - DOMAIN-SUFFIX,apps.apple.com,Proxy
