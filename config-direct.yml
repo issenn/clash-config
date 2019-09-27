@@ -190,6 +190,47 @@ Proxy:
     ws-path: '/ws'
     tls: true
 
+  - name: 'auto.freev2.top:36864'
+    type: 'vmess'
+    server: 'auto.freev2.top'
+    port: '36864'
+    uuid: 'd61fbbe3-8726-4b02-b2a1-7bc196a451d6'
+    alterId: '1'
+    cipher: 'auto'
+
+  - name: 'v2us01.isxa.top:443'
+    type: 'vmess'
+    server: 'v2us01.isxa.top'
+    port: '443'
+    uuid: 'a9b39dd2-f0ba-43e3-bafa-6726c23a7905'
+    alterId: '4'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/ray'
+    tls: true
+
+  - name: 'v2us02.isxa.top:443'
+    type: 'vmess'
+    server: 'v2us02.isxa.top'
+    port: '443'
+    uuid: 'ed0cdd4e-081a-466a-abd9-775954c40f97'
+    alterId: '4'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/ray'
+    tls: true
+
+  - name: 'v2us03.isxa.top:443'
+    type: 'vmess'
+    server: 'v2us03.isxa.top'
+    port: '443'
+    uuid: '7bc64fcd-4c9c-43b1-93f1-b3dcd5b7b352'
+    alterId: '4'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/ray'
+    tls: true
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -321,5 +362,5 @@ Rule:
   - IP-CIDR,100.64.0.0/10,DIRECT
 
   # 最终规则
-  # - GEOIP,CN,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,DIRECT
