@@ -169,6 +169,27 @@ Proxy:
     network: 'ws'
     ws-path: '/'
 
+  - name: 'www.kernels.bid:80'
+    type: 'vmess'
+    server: 'www.kernels.bid'
+    port: '80'
+    uuid: '3dd784e2-1b8b-1782-ea10-18a8da6a1bea'
+    alterId: '0'
+    cipher: auto
+    network: 'ws'
+    ws-path: '/ws'
+
+  - name: 'www.kernels.bid:443'
+    type: 'vmess'
+    server: 'www.kernels.bid'
+    port: '443'
+    uuid: '159354e8-75aa-99ea-5809-748bbd0548f8'
+    alterId: '0'
+    cipher: auto
+    network: 'ws'
+    ws-path: '/ws'
+    tls: true
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
