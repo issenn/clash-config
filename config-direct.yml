@@ -293,6 +293,22 @@ Proxy:
     tls: true
     ws-headers: { Host: ru.sixu.cf }
 
+  - name: '95.216.20.157:25131'
+    type: 'vmess'
+    server: '95.216.20.157'
+    port: '25131'
+    uuid: '52edf33a-e7de-4d85-966b-a7266c7cbd0e'
+    alterId: '233'
+    cipher: 'auto'
+
+  - name: '167.71.111.185:34037'
+    type: 'vmess'
+    server: '167.71.111.185'
+    port: '34037'
+    uuid: '4dcf2066-5cb5-4b93-8f15-a729990916fe'
+    alterId: '64'
+    cipher: 'aes-128-gcm'
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -346,6 +362,8 @@ Proxy Group:
       - 'v2.qlolp.ml:443'
       - 'v3.qlolp.ml:443'
       - 'v4.qlolp.ml:443'
+      - '95.216.20.157:25131'
+      - '167.71.111.185:34037'
       - 'Shadowsocks'
 Rule:
   # # Apple
