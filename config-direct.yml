@@ -605,6 +605,7 @@ Rule:
   - DOMAIN-SUFFIX,candysoft.jp,Proxy
   - DOMAIN-SUFFIX,interheart.co.jp,Proxy
   - DOMAIN-SUFFIX,getchu.com,Proxy
+  - DOMAIN-SUFFIX,hanime.tv,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
