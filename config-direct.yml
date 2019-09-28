@@ -385,6 +385,7 @@ Proxy Group:
   - name: 'Proxy'
     type: 'select'
     proxies:
+      - DIRECT
       - 'www.kernels.bid:443'
       - 'www.eieee.cf:80'
       - 'www.kernels.bid:80'
