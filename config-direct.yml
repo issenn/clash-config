@@ -309,6 +309,42 @@ Proxy:
     alterId: '64'
     cipher: 'aes-128-gcm'
 
+  - name: '47.240.47.67:20087'
+    type: 'vmess'
+    server: '47.240.47.67'
+    port: '20087'
+    uuid: '6cb16595-423c-4fc5-989c-d652227623d2'
+    alterId: '0'
+    cipher: 'aes-128-gcm'
+
+  - name: '116.203.23.31:41929'
+    type: 'vmess'
+    server: '116.203.23.31'
+    port: '41929'
+    uuid: 'e0fa4773-6b9c-4e38-8c2f-633c50b5316b'
+    alterId: '64'
+    cipher: 'aes-128-gcm'
+
+  - name: 'zhen-v2ray-us1.herokuapp.com:443'
+    type: 'vmess'
+    server: 'zhen-v2ray-us1.herokuapp.com'
+    port: '443'
+    uuid: '8fd6dadc-0d59-4ae7-93bb-e6b8a231c2c2'
+    alterId: '64'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    tls: true
+
+  - name: 'zhen-v2ray-eu1.herokuapp.com:443'
+    type: 'vmess'
+    server: 'zhen-v2ray-eu1.herokuapp.com'
+    port: '443'
+    uuid: '8fd6dadc-0d59-4ae7-93bb-e6b8a231c2c2'
+    alterId: '64'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    tls: true
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -364,6 +400,10 @@ Proxy Group:
       - 'v4.qlolp.ml:443'
       - '95.216.20.157:25131'
       - '167.71.111.185:34037'
+      - '47.240.47.67:20087'
+      - '116.203.23.31:41929'
+      - 'zhen-v2ray-us1.herokuapp.com:443'
+      - 'zhen-v2ray-eu1.herokuapp.com:443'
       - 'Shadowsocks'
 Rule:
   # # Apple
