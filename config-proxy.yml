@@ -600,6 +600,7 @@ Rule:
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
 
   # 国外网站
+  - DOMAIN-KEYWORD,github,Proxy
   - DOMAIN-SUFFIX,ssrshare.com,Proxy
   - DOMAIN-SUFFIX,yahoo.co.jp,Proxy
   - DOMAIN-SUFFIX,candysoft.jp,Proxy
