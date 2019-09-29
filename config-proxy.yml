@@ -606,7 +606,8 @@ Rule:
   - DOMAIN-SUFFIX,interheart.co.jp,Proxy
   - DOMAIN-SUFFIX,getchu.com,Proxy
   - DOMAIN-SUFFIX,hanime.tv,Proxy
-  - DOMAIN-KEYWORD,pixiv,Proxy
+  - DOMAIN-SUFFIX,pixiv.net,Proxy
+  - DOMAIN-SUFFIX,pximg.net,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
