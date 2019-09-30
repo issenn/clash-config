@@ -352,7 +352,6 @@ Proxy:
     uuid: '016bba96-b59d-39b4-a59f-71b9e590999b'
     alterId: '2'
     cipher: 'aes-128-gcm'
-    network: 'tcp'
 
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
