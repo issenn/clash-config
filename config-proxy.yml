@@ -377,6 +377,14 @@ Proxy:
     alterId: '2'
     cipher: 'auto'
 
+  - name: '5.183.178.23:59696'
+    type: 'vmess'
+    server: '5.183.178.23'
+    port: '59696'
+    uuid: '3f2e0683-03a5-4ec2-a002-dac72a9bd972'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -424,6 +432,9 @@ Proxy Group:
       - 'auto.freev2.top:36864'
       - 'fr.sixu.cf:443'
       - 'ru.sixu.cf:443'
+      - 'fr.sangyu.tw:443'
+      - 'ru.sangyu.tw:443'
+      - '5.183.178.23:59696'
       - 'v2us01.isxa.top:443'
       - 'v2us02.isxa.top:443'
       - 'v2us03.isxa.top:443'
