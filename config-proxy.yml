@@ -293,6 +293,30 @@ Proxy:
     tls: true
     ws-headers: { Host: ru.sixu.cf }
 
+  - name: 'fr.sangyu.tw:443'
+    type: 'vmess'
+    server: 'fr.sangyu.tw'
+    port: '443'
+    uuid: 'ce14d788-0f79-491e-85ca-05240612f28a'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/'
+    tls: true
+    ws-headers: { Host: fr.sangyu.tw }
+
+  - name: 'ru.sangyu.tw:443'
+    type: 'vmess'
+    server: 'ru.sangyu.tw'
+    port: '443'
+    uuid: '5b304ad9-bb5a-4dc3-bd5d-1fa2f3f12bb4'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
+    ws-path: '/'
+    tls: true
+    ws-headers: { Host: ru.sangyu.tw }
+
   - name: '95.216.20.157:25131'
     type: 'vmess'
     server: '95.216.20.157'
