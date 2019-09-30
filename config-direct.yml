@@ -429,7 +429,7 @@ Proxy Group:
       - 'www.kernels.bid:443'
       - 'www.eieee.cf:80'
       - 'www.kernels.bid:80'
-      - 'auto.freev2.top:36864'
+      - 'auto.freev2.top'
       - 'fr.sixu.cf:443'
       - 'ru.sixu.cf:443'
       - 'fr.sangyu.tw:443'
