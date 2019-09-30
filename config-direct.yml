@@ -192,11 +192,11 @@ Proxy:
     ws-path: '/ws'
     tls: true
 
-  - name: 'auto.freev2.top:36864'
+  - name: 'auto.freev2.top'
     type: 'vmess'
     server: 'auto.freev2.top'
-    port: '36864'
-    uuid: 'd61fbbe3-8726-4b02-b2a1-7bc196a451d6'
+    port: '26755'
+    uuid: '31b4d1d7-7abf-4fc1-9050-6edf09f9f930'
     alterId: '1'
     cipher: 'auto'
 
