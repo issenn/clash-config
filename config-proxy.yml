@@ -345,6 +345,15 @@ Proxy:
     network: 'ws'
     tls: true
 
+  - name: 'bsmkymal.v782mmio.bcray.alicization.org:29497'
+    type: 'vmess'
+    server: 'bsmkymal.v782mmio.bcray.alicization.org'
+    port: '29497'
+    uuid: '016bba96-b59d-39b4-a59f-71b9e590999b'
+    alterId: '2'
+    cipher: 'aes-128-gcm'
+    network: 'tcp'
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -405,6 +414,7 @@ Proxy Group:
       - '116.203.23.31:41929'
       - 'zhen-v2ray-us1.herokuapp.com:443'
       - 'zhen-v2ray-eu1.herokuapp.com:443'
+      - 'bsmkymal.v782mmio.bcray.alicization.org:29497'
       - 'Shadowsocks'
 Rule:
   # # Apple
@@ -608,6 +618,7 @@ Rule:
   - DOMAIN-SUFFIX,hanime.tv,Proxy
   - DOMAIN-SUFFIX,pixiv.net,Proxy
   - DOMAIN-SUFFIX,pximg.net,Proxy
+  # - DOMAIN-SUFFIX,aucru.com,DIRECT
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
