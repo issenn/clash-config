@@ -653,6 +653,7 @@ Rule:
   - DOMAIN-SUFFIX,pixiv.net,Proxy
   - DOMAIN-SUFFIX,pximg.net,Proxy
   # - DOMAIN-SUFFIX,aucru.com,Proxy
+  - DOMAIN-SUFFIX,fc2.com,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
