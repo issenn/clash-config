@@ -175,7 +175,7 @@ Proxy:
     type: 'vmess'
     server: 'www.kernels.bid'
     port: '80'
-    uuid: '161241b5-74a1-4cd1-bcff-3c712ab929b0'
+    uuid: '0a24d0aa-96bf-0282-1789-447551a82224'
     alterId: '0'
     cipher: 'auto'
     network: 'ws'
@@ -185,7 +185,7 @@ Proxy:
     type: 'vmess'
     server: 'www.kernels.bid'
     port: '443'
-    uuid: '73be2f21-e029-f26c-ee66-1e77acd16992'
+    uuid: '9f9389b4-918c-edf5-43f0-74457a58e757'
     alterId: '0'
     cipher: 'auto'
     network: 'ws'
@@ -384,6 +384,16 @@ Proxy:
     uuid: '3f2e0683-03a5-4ec2-a002-dac72a9bd972'
     alterId: '233'
     cipher: 'aes-128-gcm'
+    network: 'ws'
+
+  - name: '34.87.65.14:8011'
+    type: 'vmess'
+    server: '34.87.65.14'
+    port: '8011'
+    uuid: 'e7f45c34-ed43-4371-9573-d47379d62e32'
+    alterId: '233'
+    cipher: 'aes-128-gcm'
+    network: 'ws'
 
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
