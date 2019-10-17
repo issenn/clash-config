@@ -452,10 +452,15 @@ Proxy:
   # #   tls (skip-cert-verify)
   # - { name: "socks", type: socks5, server: server, port: 443, tls: true, skip-cert-verify: true }
 
-  - name: 'Shadowsocks'
+  - name: 'Shadowsocks-socks5'
     type: 'socks5'
     server: '127.0.0.1'
-    port: '5566'
+    port: '1080'
+
+  - name: 'Shadowsocks-socks5-ShadowsocksX-NG'
+    type: 'socks5'
+    server: '127.0.0.1'
+    port: '1086'
 
   # #   http
   # - { name: "http", type: http, server: server, port: 443 }
@@ -465,6 +470,16 @@ Proxy:
   # - { name: "http", type: http, server: server, port: 443, tls: true }
   # #   tls (https)  (skip-cert-verify)
   # - { name: "http", type: http, server: server, port: 443, tls: true, skip-cert-verify: true }
+
+  - name: 'Shadowsocks-http'
+    type: 'http'
+    server: '127.0.0.1'
+    port: '8123'
+
+  - name: 'Shadowsocks-http-ShadowsocksX-NG'
+    type: 'http'
+    server: '127.0.0.1'
+    port: '1087'
 
 Proxy Group:
   # # url-test 可以自动选择与指定 URL 测速后，延迟最短的服务器
@@ -512,7 +527,10 @@ Proxy Group:
       - 'zhen-v2ray-us1.herokuapp.com:443'
       - 'zhen-v2ray-eu1.herokuapp.com:443'
       - 'bsmkymal.v782mmio.bcray.alicization.org:29497'
-      - 'Shadowsocks'
+      - 'Shadowsocks-socks5'
+      - 'Shadowsocks-socks5-ShadowsocksX-NG'
+      - 'Shadowsocks-http'
+      - 'Shadowsocks-http-ShadowsocksX-NG'
 Rule:
   # # Apple
   # - DOMAIN-SUFFIX,apps.apple.com,Proxy
