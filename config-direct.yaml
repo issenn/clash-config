@@ -50,23 +50,25 @@ dns:
   #   'alpha.clash.dev': '::1'
 
   nameserver:
-    - 127.0.0.1
+    - '127.0.0.1'
     - 1.2.4.8
     - 8.8.8.8
     - 114.114.114.114
     - 119.29.29.29
     - 223.5.5.5
-    - tls://dns.rubyfish.cn:853
+    - 'tls://dns.rubyfish.cn:853'
   #   # - https://dns.rubyfish.cn/dns-query
 
   fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
-    - 127.0.0.1
-    - tls://dns.rubyfish.cn:853
-    - tls://1.1.1.1:853
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-    - tls://8.8.8.8:853
-    - tls://8.8.4.4:853
+    - 'tls://1.1.1.1:853'
+    - 'tcp://1.1.1.1:53'
+    - 'tls://1.0.0.1:853'
+    - 'tcp://1.0.0.1:53'
+    - 'tls://dns.google:853'
+    - 'tls://8.8.8.8:853'
+    - 'tcp://8.8.8.8:53'
+    - 'tls://8.8.4.4:853'
+    - 'tcp://8.8.4.4:53'
 
     #- https://dns.rubyfish.cn/dns-query
     #- https://cloudflare-dns.com/dns-query
