@@ -318,6 +318,18 @@ Proxy:
     tls: true
     ws-headers: { Host: kr.sixu.cf }
 
+  - name: 'kr.sixu.ga:443'
+    type: 'vmess'
+    server: 'kr.sixu.ga'
+    port: '443'
+    uuid: 'b486f3bd-53c7-46b2-bdcd-92dd21d4a3de'
+    alterId: '233'
+    cipher: 'auto'
+    network: 'ws'
+    ws-path: '/'
+    tls: true
+    ws-headers: { Host: kr.sixu.ga }
+
   - name: 'us2.sixu.cf:443'
     type: 'vmess'
     server: 'us2.sixu.cf'
@@ -507,7 +519,7 @@ Proxy Group:
       - 'fr.sixu.cf:443'
       - 'ru.sixu.cf:443'
       - 'ru2.sixu.cf:443'
-      - 'kr.sixu.cf:443'
+      - 'kr.sixu.ga:443'
       - 'us2.sixu.cf:443'
       - 'v2.sg.sixu.ga:443'
       - 'fr.sangyu.tw:443'
