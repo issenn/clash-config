@@ -748,6 +748,7 @@ Rule:
   - DOMAIN-SUFFIX,yahoo.co.jp,Proxy
   - DOMAIN-SUFFIX,candysoft.jp,Proxy
   - DOMAIN-SUFFIX,interheart.co.jp,Proxy
+  - DOMAIN-SUFFIX,nyaa.si,Proxy
   - DOMAIN-SUFFIX,getchu.com,Proxy
   - DOMAIN-SUFFIX,dmm.co.jp,Proxy
   - DOMAIN-SUFFIX,hanime.tv,Proxy
