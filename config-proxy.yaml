@@ -202,8 +202,8 @@ Proxy:
   - name: 'auto.freev2.top'
     type: 'vmess'
     server: 'auto.freev2.top'
-    port: '21638'
-    uuid: 'ed2ee82d-861f-4c56-8008-ccc6c940044a'
+    port: '50093'
+    uuid: '68893bfa-8634-49b4-943f-3670206497e5'
     alterId: '1'
     cipher: 'auto'
 
