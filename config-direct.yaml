@@ -182,7 +182,7 @@ Proxy:
     type: 'vmess'
     server: 'www.kernels.bid'
     port: '80'
-    uuid: '3af7516a-6425-4d07-d3ba-444ed3dd796a'
+    uuid: '	85571cc2-6762-34c9-95ea-53e4096bcadc'
     alterId: '0'
     cipher: 'auto'
     network: 'ws'
