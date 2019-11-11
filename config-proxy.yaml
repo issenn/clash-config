@@ -533,6 +533,17 @@ Proxy:
 
   - { name: "vmess01", type: vmess, server: v.yangaihou.ml, port: 443, uuid: aa631dda-ed12-11e9-90fd-42010aaa0032, alterId: 16, cipher: auto, network: ws, ws-path: /RjsbcyfI/, tls: true  }
 
+  - name: 'CF-LAX'
+    type: 'vmess'
+    server: 'portan.cf'
+    port: '443'
+    uuid: 'af656400-d5ac-4842-9619-bab705c5ce56'
+    alterId: '64'
+    cipher: 'auto'
+    network: 'ws'
+    ws-path: '/apple'
+    tls: true
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -594,6 +605,7 @@ Proxy Group:
       - 'www.kernels.bid:80'
       - 'auto.freev2.top'
       - '185.37.253.89:443'
+      - 'CF-LAX'
       - 'fr.sixu.ga:443'
       - 'ru.sixu.ga:443'
       - 'ru2.sixu.ga:443'
