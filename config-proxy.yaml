@@ -207,6 +207,14 @@ Proxy:
     alterId: '1'
     cipher: 'auto'
 
+  - name: '185.37.253.89:443'
+    type: 'vmess'
+    server: '185.37.253.89'
+    port: '443'
+    uuid: '87fedbd0-20fc-4aa7-9fd9-7f92cc1bbfc3'
+    alterId: '4'
+    cipher: 'auto'
+
   - name: 'v2us01.isxa.top:443'
     type: 'vmess'
     server: 'v2us01.isxa.top'
@@ -522,6 +530,7 @@ Proxy Group:
       - 'www.eieee.cf:80'
       - 'www.kernels.bid:80'
       - 'auto.freev2.top'
+      - '185.37.253.89:443'
       - 'fr.sixu.ga:443'
       - 'ru.sixu.ga:443'
       - 'ru2.sixu.ga:443'
