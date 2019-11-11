@@ -531,6 +531,8 @@ Proxy:
 
   - { name: "🎵 NeteaseMusic", type: http, server: "47.110.231.106", port: 8080}
 
+  - { name: "vmess01", type: vmess, server: v.yangaihou.ml, port: 443, uuid: aa631dda-ed12-11e9-90fd-42010aaa0032, alterId: 16, cipher: auto, network: ws, ws-path: /RjsbcyfI/, tls: true  }
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -623,6 +625,7 @@ Proxy Group:
       - "🔔 v2ray-Netflix#1"
       - "🔔 v2ray-Netflix#2"
       - "🎵 NeteaseMusic"
+      - 'vmess01'
       - 'Shadowsocks-socks5'
       - 'Shadowsocks-socks5-ShadowsocksX-NG'
       - 'Shadowsocks-http'
