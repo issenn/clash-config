@@ -855,6 +855,7 @@ Rule:
   - DOMAIN-SUFFIX,quora.com,Proxy
   - DOMAIN-SUFFIX,golang.org,Proxy
   - DOMAIN-SUFFIX,medium.com,Proxy
+  - DOMAIN-SUFFIX,reddit.com,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
