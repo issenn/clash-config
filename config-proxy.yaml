@@ -853,6 +853,7 @@ Rule:
   # - DOMAIN-SUFFIX,aucru.com,Proxy
   - DOMAIN-SUFFIX,fc2.com,Proxy
   - DOMAIN-SUFFIX,quora.com,Proxy
+  - DOMAIN-SUFFIX,golang.org,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
