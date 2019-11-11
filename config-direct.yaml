@@ -156,6 +156,38 @@ Proxy:
   #     # headers:
   #     #   custom: value
 
+  - name: "ss-hk"
+    type: ss
+    server: hk4-ult3.chtmi.pw
+    port: 4205
+    cipher: AEAD_CHACHA20_POLY1305
+    password: "zRKxt4NfsFyhRxN"
+    #plugin: obfs
+    #plugin-opts:
+      #mode: tls # 混淆模式，可以选择 http 或 tls
+      #host: bing.com # 混淆域名，需要和服务器配置保持一致
+
+  - name: "ss-singapore"
+    type: ss
+    server: sg1-ult3.chtmi.pw
+    port: 4205
+    cipher: AEAD_CHACHA20_POLY1305
+    password: "zRKxt4NfsFyhRxN"
+
+  - name: "ss-usa"
+    type: ss
+    server: sh2-ult3.chtmi.pw
+    port: 4205
+    cipher: AEAD_CHACHA20_POLY1305
+    password: "zRKxt4NfsFyhRxN"
+
+  - name: "ss-san"
+    type: ss
+    server: 138.68.6.74
+    port: 443
+    cipher: AEAD_CHACHA20_POLY1305
+    password: "cY&&r389H^BK6Hus"
+
   # # vmess
   # # 支持加密方式：auto / aes-128-gcm / chacha20-poly1305 / none
   # - { name: "vmess", type: vmess, server: server, port: 443, uuid: uuid, alterId: 32, cipher: auto }
@@ -559,6 +591,10 @@ Proxy Group:
       - 'Shadowsocks-socks5-ShadowsocksX-NG'
       - 'Shadowsocks-http'
       - 'Shadowsocks-http-ShadowsocksX-NG'
+      - 'ss-hk'
+      - 'ss-singapore'
+      - 'ss-san'
+      - 'ss-usa'
 Rule:
   # # Apple
   # - DOMAIN-SUFFIX,apps.apple.com,Proxy
