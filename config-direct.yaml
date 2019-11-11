@@ -188,6 +188,27 @@ Proxy:
     cipher: AEAD_CHACHA20_POLY1305
     password: "cY&&r389H^BK6Hus"
 
+  - name: "🔔 SS-HK#1"
+    type: ss
+    server: sshk1.iidx.xyz
+    port: 11451
+    cipher: CHACHA20-IETF
+    password: "lovezq4ever"
+
+  - name: "🔔 SS-HK#2"
+    type: ss
+    server: sshk2.iidx.xyz
+    port: 13531
+    cipher: CHACHA20-IETF
+    password: "lixiang97612"
+
+  - name: "🔔 Mirage-香港"
+    type: ss
+    server: mirage.highway365.xyz
+    port: 58125
+    cipher: CHACHA20
+    password: "whiskeyeyes"
+
   # # vmess
   # # 支持加密方式：auto / aes-128-gcm / chacha20-poly1305 / none
   # - { name: "vmess", type: vmess, server: server, port: 443, uuid: uuid, alterId: 32, cipher: auto }
@@ -502,6 +523,14 @@ Proxy:
     cipher: 'aes-128-gcm'
     network: 'ws'
 
+  - { name: "🔔 v2ray-SG", type: vmess, server: 52.148.80.117, port: 8084, uuid: dd92a520-74ff-4caf-9ca2-449f7a47c7d7, alterId: 233, cipher: aes-128-gcm }
+
+  - { name: "🔔 v2ray-Netflix#1", type: vmess, server: rin.hkg.highway365.xyz, port: 8082, uuid: 12141218-a8ed-4140-9058-51410e07060c, alterId: 16, cipher: aes-128-gcm }
+
+  - { name: "🔔 v2ray-Netflix#2", type: vmess, server: miach.highway365.xyz, port: 8080, uuid: 12141218-a8ed-4140-9058-51410e07060c, alterId: 8, cipher: aes-128-gcm }
+
+  - { name: "🎵 NeteaseMusic", type: http, server: "47.110.231.106", port: 8080}
+
   # #   socks5
   # - { name: "socks", type: socks5, server: server, port: 443 }
   # #   socks5 with authentication
@@ -587,6 +616,13 @@ Proxy Group:
       - 'zhen-v2ray-us1.herokuapp.com:443'
       - 'zhen-v2ray-eu1.herokuapp.com:443'
       - 'bsmkymal.v782mmio.bcray.alicization.org:29497'
+      - "🔔 SS-HK#1"
+      - "🔔 SS-HK#2"
+      - "🔔 Mirage-香港"
+      - "🔔 v2ray-SG"
+      - "🔔 v2ray-Netflix#1"
+      - "🔔 v2ray-Netflix#2"
+      - "🎵 NeteaseMusic"
       - 'Shadowsocks-socks5'
       - 'Shadowsocks-socks5-ShadowsocksX-NG'
       - 'Shadowsocks-http'
