@@ -857,6 +857,7 @@ Rule:
   - DOMAIN-SUFFIX,medium.com,Proxy
   - DOMAIN-SUFFIX,reddit.com,Proxy
   - DOMAIN-SUFFIX,godoc.org,Proxy
+  - DOMAIN-SUFFIX,mega.nz,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
