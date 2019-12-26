@@ -202,12 +202,12 @@ Proxy:
     cipher: CHACHA20-IETF
     password: "lixiang97612"
 
-  - name: "🔔 Mirage-香港"
-    type: ss
-    server: mirage.highway365.xyz
-    port: 58125
-    cipher: CHACHA20
-    password: "whiskeyeyes"
+  # - name: "Mirage-香港"
+  #   type: ss
+  #   server: mirage.highway365.xyz
+  #   port: 58125
+  #   cipher: CHACHA20
+  #   password: "whiskeyeyes"
 
   # # vmess
   # # 支持加密方式：auto / aes-128-gcm / chacha20-poly1305 / none
