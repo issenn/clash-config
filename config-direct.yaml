@@ -632,7 +632,7 @@ Proxy Group:
       - 'bsmkymal.v782mmio.bcray.alicization.org:29497'
       - "🔔 SS-HK#1"
       - "🔔 SS-HK#2"
-      - "🔔 Mirage-香港"
+      # - "Mirage-香港"
       - "🔔 v2ray-SG"
       - "🔔 v2ray-Netflix#1"
       - "🔔 v2ray-Netflix#2"
