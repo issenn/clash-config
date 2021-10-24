@@ -82,18 +82,20 @@ proxy-groups:
   - name: Proxy        # 全局选择
     type: select
     proxies:
-      - auto           # 延迟最低
-      - 选择国家
-      - 选择节点
-      - fallback-auto  # 失败切换
-      - load-balance   # 负载均衡
+      - Auto           # 延迟最低
+      - Country        # 选择国家
+      - Node           # 选择节点
+      - Fallback-auto  # 失败切换
+      - Load-balance   # 负载均衡
 
   # 延迟最低
-  - name: auto
+  - name: Auto
     type: url-test
+    proxies:
+      - Foreign-auto
+      # - Domestic-auto
     use:
       - shadowsocks
-      - all
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     # tolerance: 50
@@ -101,14 +103,14 @@ proxy-groups:
     # disable-udp: true
 
   # 选择节点
-  - name: 选择节点
+  - name: Node
     type: select
     use:
       - shadowsocks
       - all
 
   # 负载均衡
-  - name: load-balance
+  - name: Load-balance
     type: load-balance
     use:
       - shadowsocks
@@ -120,20 +122,25 @@ proxy-groups:
     # strategy: consistent-hashing  # or round-robin
 
   # 失败切换
-  - name: fallback-auto
+  - name: Fallback-auto
     type: fallback
-    proxies:
-      - DIRECT
     use:
+      - shadowsocks
       - all
+    proxies:
+      - Domestic
+      - DIRECT
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     # lazy: true
     # disable-udp: true
 
-  - name: 选择国家
+  # 选择国家
+  - name: Country
     type: select
     proxies:
+      - Domestic
+      - Foreign
       - 🇨🇳 中国
       - 🇯🇵 日本
       - 🇸🇬 新加坡
@@ -148,12 +155,57 @@ proxy-groups:
       - 🇳🇱 荷兰
       - 其他国家
 
+  # 选择国内
   - name: Domestic
     type: select
-    use:
-      - shadowsocks
+    proxies:
+      - Domestic-auto
+      - DIRECT
+      - 🇨🇳 中国
+
+  - name: Domestic-auto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
     proxies:
       - DIRECT
+      - 🇨🇳 中国-auto
+
+  # 选择国外
+  - name: Foreign
+    type: select
+    proxies:
+      - Foreign-auto
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🇺🇸 美国
+      - 🇨🇦 加拿大
+      - 🇷🇺 俄罗斯
+      - 🇦🇺 澳大利亚
+      - 🇨🇭 瑞士
+      - 🇩🇪 德国
+      - 🇫🇷 法国
+      - 🇬🇧 英国
+      - 🇳🇱 荷兰
+      - 其他国家
+
+  - name: Foreign-auto
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    proxies:
+      - 🇯🇵 日本-auto
+      - 🇸🇬 新加坡-auto
+      - 🇺🇸 美国-auto
+      - 🇨🇦 加拿大-auto
+      - 🇷🇺 俄罗斯-auto
+      - 🇦🇺 澳大利亚-auto
+      - 🇨🇭 瑞士-auto
+      - 🇩🇪 德国-auto
+      - 🇫🇷 法国-auto
+      - 🇬🇧 英国-auto
+      - 🇳🇱 荷兰-auto
+      - 其他国家-auto
 
   - name: Others
     type: select
@@ -165,6 +217,13 @@ proxy-groups:
       - Domestic
 
   - name: 🇨🇳 中国
+    type: select
+    proxies:
+      - 🇨🇳 中国-auto
+    use:
+      - cn
+
+  - name: 🇨🇳 中国-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -172,6 +231,13 @@ proxy-groups:
       - cn
 
   - name: 🇯🇵 日本
+    type: select
+    proxies:
+      - 🇯🇵 日本-auto
+    use:
+      - jp
+
+  - name: 🇯🇵 日本-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -179,6 +245,13 @@ proxy-groups:
       - jp
 
   - name: 🇸🇬 新加坡
+    type: select
+    proxies:
+      - 🇸🇬 新加坡-auto
+    use:
+      - sg
+
+  - name: 🇸🇬 新加坡-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -186,6 +259,13 @@ proxy-groups:
       - sg
 
   - name: 🇺🇸 美国
+    type: select
+    proxies:
+      - 🇺🇸 美国-auto
+    use:
+      - us
+
+  - name: 🇺🇸 美国-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -193,6 +273,13 @@ proxy-groups:
       - us
 
   - name: 🇨🇦 加拿大
+    type: select
+    proxies:
+      - 🇨🇦 加拿大-auto
+    use:
+      - ca
+
+  - name: 🇨🇦 加拿大-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -200,6 +287,13 @@ proxy-groups:
       - ca
 
   - name: 🇷🇺 俄罗斯
+    type: select
+    proxies:
+      - 🇷🇺 俄罗斯-auto
+    use:
+      - ru
+
+  - name: 🇷🇺 俄罗斯-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -207,6 +301,13 @@ proxy-groups:
       - ru
 
   - name: 🇦🇺 澳大利亚
+    type: select
+    proxies:
+      - 🇦🇺 澳大利亚-auto
+    use:
+      - au
+
+  - name: 🇦🇺 澳大利亚-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -214,6 +315,13 @@ proxy-groups:
       - au
 
   - name: 🇨🇭 瑞士
+    type: select
+    proxies:
+      - 🇨🇭 瑞士-auto
+    use:
+      - ch
+
+  - name: 🇨🇭 瑞士-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -221,6 +329,13 @@ proxy-groups:
       - ch
 
   - name: 🇩🇪 德国
+    type: select
+    proxies:
+      - 🇩🇪 德国-auto
+    use:
+      - de
+
+  - name: 🇩🇪 德国-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -228,6 +343,13 @@ proxy-groups:
       - de
 
   - name: 🇫🇷 法国
+    type: select
+    proxies:
+      - 🇫🇷 法国-auto
+    use:
+      - fr
+
+  - name: 🇫🇷 法国-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -235,6 +357,13 @@ proxy-groups:
       - fr
 
   - name: 🇬🇧 英国
+    type: select
+    proxies:
+      - 🇬🇧 英国-auto
+    use:
+      - gb
+
+  - name: 🇬🇧 英国-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -242,6 +371,13 @@ proxy-groups:
       - gb
 
   - name: 🇳🇱 荷兰
+    type: select
+    proxies:
+      - 🇳🇱 荷兰-auto
+    use:
+      - nl
+
+  - name: 🇳🇱 荷兰-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -249,11 +385,44 @@ proxy-groups:
       - nl
 
   - name: 其他国家
+    type: select
+    proxies:
+      - 其他国家-auto
+    use:
+      - others
+
+  - name: 其他国家-auto
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     use:
       - others
+
+  # Apple 服务代理
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+
+  # 国际流媒体服务
+  # - name: "GlobalMedia"
+  #   type: select
+  #   proxies:
+  #     - "Proxy"
+
+  # 大陆流媒体面向港澳台限定服务
+  # - name: "HKMTMedia"
+  #   type: select
+  #   proxies:
+  #     - "DIRECT"
+
+  # 运营商及声名狼藉网站劫持
+  # - name: "Hijacking"
+  #   type: select
+  #   proxies:
+  #     - "REJECT"
+  #     - "DIRECT"
 
   - name: AdBlock
     type: select
@@ -262,7 +431,7 @@ proxy-groups:
       - DIRECT
       - Proxy
 
-  - name: Apple
+  - name: Final
     type: select
     proxies:
       - DIRECT
@@ -418,9 +587,36 @@ proxy-providers:
 
 rules:
   - RULE-SET,google,Proxy
+
+  # > Apple
+  - DOMAIN-SUFFIX,aaplimg.com,Apple
+  - DOMAIN-SUFFIX,apple.co,Apple
+  - DOMAIN-SUFFIX,apple.com,Apple
+  - DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+  - DOMAIN-SUFFIX,appstore.com,Apple
+  - DOMAIN-SUFFIX,cdn-apple.com,Apple
+  - DOMAIN-SUFFIX,crashlytics.com,Apple
+  - DOMAIN-SUFFIX,icloud.com,Apple
+  - DOMAIN-SUFFIX,icloud-content.com,Apple
+  - DOMAIN-SUFFIX,me.com,Apple
+  - DOMAIN-SUFFIX,mzstatic.com,Apple
+  - DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+  - IP-CIDR,17.0.0.0/8,Apple,no-resolve
+
+  # Local Area Network
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+
+  # DNSPod Public DNS+
+  - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
+
+  # GeoIP China
   - GEOIP,CN,DIRECT
-  # - MATCH,Proxy
-  - MATCH,DIRECT
+
+  - MATCH,Final
 
 # rule-providers:
 #   externalrule:   # name of the provider，in this example the name of the rule-provider is externalrule
