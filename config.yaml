@@ -486,7 +486,7 @@ proxy-groups:
 proxy-providers:
   shadowsocks:
     type: http
-    url: https://raw.githubusercontent.com/issenn/clash-config/master/proxies/providers/shadowsocks.yaml
+    url: http://clash.issenn.ml/proxies/providers/shadowsocks.yaml
     path: ./proxies/providers/shadowsocks.yaml
     interval: 3600
     health-check:
@@ -496,7 +496,7 @@ proxy-providers:
 
   lan:
     type: http
-    url: https://raw.githubusercontent.com/issenn/clash-config/master/proxies/providers/lan.yaml
+    url: http://clash.issenn.ml/proxies/providers/lan.yaml
     path: ./proxies/providers/lan.yaml
     interval: 3600
     health-check:
@@ -506,7 +506,7 @@ proxy-providers:
 
   packet-capture:
     type: http
-    url: https://raw.githubusercontent.com/issenn/clash-config/master/proxies/providers/packet-capture.yaml
+    url: http://clash.issenn.ml/proxies/providers/packet-capture.yaml
     path: ./proxies/providers/packet-capture.yaml
     interval: 3600
     health-check:
@@ -643,6 +643,8 @@ proxy-providers:
 rules:
   - RULE-SET,google,Proxy
 
+  - RULE-SET,issenn,DIRECT
+
   # > Apple
   - DOMAIN-SUFFIX,aaplimg.com,Apple
   - DOMAIN-SUFFIX,apple.co,Apple
@@ -690,5 +692,12 @@ rule-providers:
     type: http
     behavior: domain
     path: ./rules/providers/google.yaml
-    url: https://raw.githubusercontent.com/issenn/clash-config/master/rules/providers/google.yaml
+    url: http://clash.issenn.ml/rules/providers/google.yaml
+    interval: 86400
+
+  issenn:
+    type: http
+    behavior: domain
+    path: ./rules/providers/issenn.yaml
+    url: http://clash.issenn.ml/rules/providers/issenn.yaml
     interval: 86400

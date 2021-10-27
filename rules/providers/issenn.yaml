@@ -1,0 +1,8 @@
+# Behavior: domain
+
+payload:
+  - "+.issenn.local"
+  - "+.issenn.lan"
+  - "+.issenn.cf"
+  - "+.issenn.ml"
+  - "+.issenn.online"
