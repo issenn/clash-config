@@ -1,0 +1,15 @@
+proxies:
+  - name: 'Charles-http'
+    type: http
+    server: '10.0.0.102'
+    port: 8888
+    # username: username
+    # password: password
+    # tls: true # https
+    # skip-cert-verify: true
+    # sni: custom.com
+
+  - name: 'Charles-socks5'
+    type: socks5
+    server: '10.0.0.102'
+    port: 8889
