@@ -455,6 +455,15 @@ proxy-groups:
     use:
       - packet-capture
 
+  - name: GEOIP-CN
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - Lan
+      - PacketCapture
+      - Final
+
   - name: Final
     type: select
     proxies:
@@ -664,7 +673,7 @@ rules:
   - IP-CIDR,182.254.116.0/24,DIRECT,no-resolve
 
   # GeoIP China
-  - GEOIP,CN,DIRECT
+  - GEOIP,CN,GEOIP-CN
 
   - MATCH,Final
 
